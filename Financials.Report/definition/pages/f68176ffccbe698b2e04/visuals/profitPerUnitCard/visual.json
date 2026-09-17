@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "profitPerUnitCard",
+  "position": {
+    "x": 1590,
+    "y": 105,
+    "z": 6,
+    "width": 290,
+    "height": 145
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
+                  "Property": "Profit per Unit"
+                }
+              },
+              "queryRef": "financials.Profit per Unit"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Profit per Unit'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

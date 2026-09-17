@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "yearSlicer",
+  "position": {
+    "x": 990,
+    "y": 660,
+    "z": 10,
+    "width": 280,
+    "height": 165
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
+                  "Property": "Year"
+                }
+              },
+              "queryRef": "financials.Year"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Filter: Fiscal Year'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
